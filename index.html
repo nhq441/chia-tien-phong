@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <p class="money-avg"></p>
+
+    <div class="input-container">
+        <input class="unit" type="text" placeholder="Đơn vị, VD: k, nghìn đồng,..." onkeydown="
+            if (event.key === 'Enter') {
+                beforeCaculate()
+            }
+        ">
+        <input class="quantity" type="number" name="" id="" placeholder="Số người" required>
+        <span class="span-name">Tên</span>
+        <span class="span-money">Số tiền</span>
+    </div>
+
+    <button class="next" onclick="
+        beforeCaculate();
+    ">Next</button>
+
+    <button class="caculate hide" onclick="
+        main();
+    ">Tính</button>
+
+    <div class="container-1 hide">
+        <table class="table-1">
+            <thead>
+                <tr>
+                    <th>Tên</th>
+                    <th>Số tiền</th>
+                    <th>Nhận lại</th>
+                    <th>Trả thêm</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container-2 hide">
+        <table class="table-2">
+            <thead>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="note hide">(kết quả được làm tròn tới 2 chữ số thập phân, nghĩa là có sai số nhỏ hơn 0.005)</p>
+
+    <script src="./script.js"></script>
+</body>
+</html>
